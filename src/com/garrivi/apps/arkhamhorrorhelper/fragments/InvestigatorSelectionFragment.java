@@ -3,22 +3,21 @@ package com.garrivi.apps.arkhamhorrorhelper.fragments;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
+import android.app.ListFragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.garrivi.apps.arkhamhorrorhelper.R;
 import com.garrivi.apps.arkhamhorrorhelper.common.Investigator;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
@@ -32,7 +31,7 @@ public class InvestigatorSelectionFragment extends ListFragment {
 		ArrayList<Investigator> investigatorList = new ArrayList<Investigator>();
 		try {
 			InputStream isInvestigators = context.getAssets().open(
-					"characters.json");
+					"investigators.json");
 			JsonReader jrInvestigators = new JsonReader(new InputStreamReader(
 					isInvestigators));
 	
@@ -54,7 +53,7 @@ public class InvestigatorSelectionFragment extends ListFragment {
 		Collections.sort((List<Investigator>)investigatorList, new Comparator<Investigator>(){
 			@Override
 			public int compare(Investigator arg0, Investigator arg1) {
-				return arg0.getNombre().compareTo(arg1.getNombre());
+				return arg0.getName().compareTo(arg1.getName());
 			}
 		});
 		
@@ -91,7 +90,7 @@ public class InvestigatorSelectionFragment extends ListFragment {
 				
 				if (view == null){
 					view = getActivity().getLayoutInflater().inflate(
-						android.R.layout.simple_list_item_2, container, false);
+						R.layout.list_item_investigator, container, false);
 				}
 
 				updateData((Investigator) getItem(position), view);
@@ -101,11 +100,13 @@ public class InvestigatorSelectionFragment extends ListFragment {
 			
 			private void updateData(Investigator item, View view) {
 				TextView text1 = (TextView) view
-						.findViewById(android.R.id.text1);
-				text1.setText(item.getNombre());
+						.findViewById(R.id.text1);
+				text1.setText(item.getName());
 				TextView text2 = (TextView) view
-						.findViewById(android.R.id.text2);
-				text2.setText(item.getProfesion());
+						.findViewById(R.id.text2);
+				text2.setText(item.getOcupation());
+				((TextView)view.findViewById(R.id.txtSanity)).setText(item.getSanity());
+				((TextView)view.findViewById(R.id.txtStamina)).setText(item.getStamina());
 				
 			}
 		});
