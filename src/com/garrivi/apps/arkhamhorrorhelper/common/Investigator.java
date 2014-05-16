@@ -2,11 +2,11 @@ package com.garrivi.apps.arkhamhorrorhelper.common;
 
 public class Investigator {
 	private int id;
-	private String nombre;
-	private String profesion;
-	private String comienzo;
-	private String cordura;
-	private String resistencia;
+	private String name;
+	private String ocupation;
+	private String location;
+	private String sanity;
+	private String stamina;
 	private int expansion;
 
 	public Investigator() {
@@ -21,44 +21,44 @@ public class Investigator {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getProfesion() {
-		return profesion;
+	public String getOcupation() {
+		return ocupation;
 	}
 
-	public void setProfesion(String profesion) {
-		this.profesion = profesion;
+	public void setOcupation(String ocupation) {
+		this.ocupation = ocupation;
 	}
 
-	public String getComienzo() {
-		return comienzo;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setComienzo(String comienzo) {
-		this.comienzo = comienzo;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
-	public String getCordura() {
-		return cordura;
+	public String getSanity() {
+		return sanity;
 	}
 
-	public void setCordura(String cordura) {
-		this.cordura = cordura;
+	public void setSanity(String sanity) {
+		this.sanity = sanity;
 	}
 
-	public String getResistencia() {
-		return resistencia;
+	public String getStamina() {
+		return stamina;
 	}
 
-	public void setResistencia(String resistencia) {
-		this.resistencia = resistencia;
+	public void setStamina(String stamina) {
+		this.stamina = stamina;
 	}
 
 	public int getExpansion() {
@@ -68,5 +68,6 @@ public class Investigator {
 	public void setExpansion(int expansion) {
 		this.expansion = expansion;
 	}
+
 
 }

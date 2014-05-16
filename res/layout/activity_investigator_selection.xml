@@ -24,21 +24,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" >
 
         <Button
             android:id="@+id/btnAll"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="All" />
+            android:text="All"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btnRandomize"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Random" />
+            android:text="Random"
+            android:visibility="gone" />
+
     </LinearLayout>
 
 </RelativeLayout>

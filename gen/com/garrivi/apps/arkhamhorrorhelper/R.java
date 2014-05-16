@@ -24,15 +24,24 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int LinearLayout1=0x7f080005;
         public static final int RelativeLayout1=0x7f080000;
-        public static final int action_settings=0x7f080005;
+        public static final int TableRow01=0x7f08000b;
+        public static final int TableRow02=0x7f080008;
+        public static final int action_settings=0x7f08000d;
         public static final int btnAll=0x7f080003;
         public static final int btnRandomize=0x7f080004;
         public static final int main_content=0x7f080001;
         public static final int main_menu=0x7f080002;
+        public static final int text1=0x7f080006;
+        public static final int text2=0x7f080007;
+        public static final int txtFocus=0x7f08000c;
+        public static final int txtSanity=0x7f080009;
+        public static final int txtStamina=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_investigator_selection=0x7f030000;
+        public static final int list_item_investigator=0x7f030001;
     }
     public static final class menu {
         public static final int investigator_selection=0x7f070000;
@@ -69,5 +78,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int InvestigatorTableFirstColumn=0x7f060002;
     }
 }
